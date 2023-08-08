@@ -1,0 +1,12 @@
+{
+    "https://api.shinyapps.io": {
+        "server_url": "https://api.shinyapps.io",
+        "filename": "C:\\Users\\timgo\\OneDrive\\Desktop\\School\\Summer2023\\Continuous Intelligence\\Module05\\cintel-05-live-updates",
+        "app_url": "https://tgormly.shinyapps.io/cintel-05-live-updates1/",
+        "app_id": 9503818,
+        "app_guid": null,
+        "title": "cintel-05-live-updates",
+        "app_mode": "python-shiny",
+        "app_store_version": 1
+    }
+}

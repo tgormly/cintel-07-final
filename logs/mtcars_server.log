@@ -1,0 +1,107 @@
+2023-08-03 20:41:56,346.mtcars_server.INFO =============================================================
+2023-08-03 20:41:56,347.mtcars_server.INFO Today is 2023-08-03 at 08:41 PM
+2023-08-03 20:41:56,347.mtcars_server.INFO This file is running on: nt Windows 10
+2023-08-03 20:41:56,348.mtcars_server.INFO The Python version is: 3.9.5
+2023-08-03 20:41:56,348.mtcars_server.INFO The active environment path is:   C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module05\cintel-05-live-updates\.venv
+2023-08-03 20:41:56,349.mtcars_server.INFO The current working directory is: C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module05\cintel-05-live-updates
+2023-08-03 20:41:56,350.mtcars_server.INFO =============================================================
+2023-08-03 20:42:12,116.mtcars_server.DEBUG filter message: Showing 32 of 32 records
+2023-08-03 20:42:12,238.mtcars_server.INFO Starting mtcars_output_widget1
+2023-08-03 20:42:13,316.mtcars_server.INFO Starting mtcars_plot1
+2023-08-03 20:42:14,804.mtcars_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module05\cintel-05-live-updates\data\mtcars_location.csv
+2023-08-03 20:42:14,809.mtcars_server.INFO READING df len 4
+2023-08-03 20:42:14,809.mtcars_server.INFO init reactive_temp_df len: 4
+2023-08-03 20:42:14,812.mtcars_server.INFO mtcars_temperature_location_string starting
+2023-08-03 20:42:14,812.mtcars_server.INFO Recent Temperature in F for ELY MN.
+Updated once per minute for 15 minutes.
+Keeps the most recent 10 minutes of data.
+2023-08-03 20:42:14,817.mtcars_server.INFO Rendering TEMP table with 1 rows
+2023-08-03 20:42:14,822.mtcars_server.INFO Rendering TEMP chart with 1 points
+2023-08-03 20:42:14,900.mtcars_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module05\cintel-05-live-updates\data\mtcars_stock.csv
+2023-08-03 20:42:14,904.mtcars_server.INFO READING df len 4
+2023-08-03 20:42:14,905.mtcars_server.INFO init reactive_temp_df len: 4
+2023-08-03 20:42:14,906.mtcars_server.INFO mtcars_temperature_location_string starting
+2023-08-03 20:42:14,906.mtcars_server.INFO Recent regular market price for Duolingo.
+Updated once per minute for 15 minutes.
+Keeps the most recent 10 minutes of data.
+2023-08-03 20:42:14,912.mtcars_server.INFO Rendering STOCK table with 1 rows
+2023-08-03 20:42:14,918.mtcars_server.INFO Rendering STOCK chart with 1 points
+2023-08-03 20:42:16,395.mtcars_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module05\cintel-05-live-updates\data\mtcars_location.csv
+2023-08-03 20:42:16,404.mtcars_server.INFO READING df len 4
+2023-08-03 20:42:16,406.mtcars_server.INFO Rendering TEMP table with 1 rows
+2023-08-03 20:42:16,414.mtcars_server.INFO Rendering TEMP chart with 1 points
+2023-08-03 20:42:16,509.mtcars_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module05\cintel-05-live-updates\data\mtcars_stock.csv
+2023-08-03 20:42:16,511.mtcars_server.INFO READING df len 4
+2023-08-03 20:42:16,513.mtcars_server.INFO Rendering STOCK table with 1 rows
+2023-08-03 20:42:16,517.mtcars_server.INFO Rendering STOCK chart with 1 points
+2023-08-03 20:42:26,895.mtcars_server.INFO init reactive_temp_df len: 4
+2023-08-03 20:42:26,898.mtcars_server.INFO mtcars_temperature_location_string starting
+2023-08-03 20:42:26,899.mtcars_server.INFO Recent regular market price for Allbirds.
+Updated once per minute for 15 minutes.
+Keeps the most recent 10 minutes of data.
+2023-08-03 20:42:26,905.mtcars_server.INFO Rendering STOCK table with 1 rows
+2023-08-03 20:42:26,911.mtcars_server.INFO Rendering STOCK chart with 1 points
+2023-08-03 20:42:32,863.mtcars_server.INFO init reactive_temp_df len: 4
+2023-08-03 20:42:32,867.mtcars_server.INFO mtcars_temperature_location_string starting
+2023-08-03 20:42:32,869.mtcars_server.INFO Recent regular market price for Cricut.
+Updated once per minute for 15 minutes.
+Keeps the most recent 10 minutes of data.
+2023-08-03 20:42:32,876.mtcars_server.INFO Rendering STOCK table with 1 rows
+2023-08-03 20:42:32,882.mtcars_server.INFO Rendering STOCK chart with 1 points
+2023-08-03 20:42:34,635.mtcars_server.INFO init reactive_temp_df len: 4
+2023-08-03 20:42:34,637.mtcars_server.INFO mtcars_temperature_location_string starting
+2023-08-03 20:42:34,638.mtcars_server.INFO Recent regular market price for The Vita Coco Company.
+Updated once per minute for 15 minutes.
+Keeps the most recent 10 minutes of data.
+2023-08-03 20:42:34,646.mtcars_server.INFO Rendering STOCK table with 1 rows
+2023-08-03 20:42:34,652.mtcars_server.INFO Rendering STOCK chart with 1 points
+2023-08-03 20:42:38,432.mtcars_server.INFO init reactive_temp_df len: 4
+2023-08-03 20:42:38,437.mtcars_server.INFO mtcars_temperature_location_string starting
+2023-08-03 20:42:38,438.mtcars_server.INFO Recent regular market price for Duolingo.
+Updated once per minute for 15 minutes.
+Keeps the most recent 10 minutes of data.
+2023-08-03 20:42:38,444.mtcars_server.INFO Rendering STOCK table with 1 rows
+2023-08-03 20:42:38,449.mtcars_server.INFO Rendering STOCK chart with 1 points
+2023-08-03 20:43:16,553.mtcars_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module05\cintel-05-live-updates\data\mtcars_location.csv
+2023-08-03 20:43:16,573.mtcars_server.INFO READING df len 8
+2023-08-03 20:43:16,576.mtcars_server.INFO Rendering TEMP table with 2 rows
+2023-08-03 20:43:16,584.mtcars_server.INFO Rendering TEMP chart with 2 points
+2023-08-03 20:43:17,696.mtcars_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module05\cintel-05-live-updates\data\mtcars_stock.csv
+2023-08-03 20:43:17,698.mtcars_server.INFO READING df len 8
+2023-08-03 20:43:17,700.mtcars_server.INFO Rendering STOCK table with 2 rows
+2023-08-03 20:43:17,704.mtcars_server.INFO Rendering STOCK chart with 2 points
+2023-08-03 20:43:32,270.mtcars_server.INFO init reactive_temp_df len: 8
+2023-08-03 20:43:32,273.mtcars_server.INFO mtcars_temperature_location_string starting
+2023-08-03 20:43:32,274.mtcars_server.INFO Recent regular market price for Allbirds.
+Updated once per minute for 15 minutes.
+Keeps the most recent 10 minutes of data.
+2023-08-03 20:43:32,282.mtcars_server.INFO Rendering STOCK table with 2 rows
+2023-08-03 20:43:32,287.mtcars_server.INFO Rendering STOCK chart with 2 points
+2023-08-03 20:43:38,773.mtcars_server.INFO init reactive_temp_df len: 8
+2023-08-03 20:43:38,777.mtcars_server.INFO mtcars_temperature_location_string starting
+2023-08-03 20:43:38,778.mtcars_server.INFO Recent regular market price for Cricut.
+Updated once per minute for 15 minutes.
+Keeps the most recent 10 minutes of data.
+2023-08-03 20:43:38,783.mtcars_server.INFO Rendering STOCK table with 2 rows
+2023-08-03 20:43:38,788.mtcars_server.INFO Rendering STOCK chart with 2 points
+2023-08-03 20:43:44,002.mtcars_server.INFO init reactive_temp_df len: 8
+2023-08-03 20:43:44,006.mtcars_server.INFO mtcars_temperature_location_string starting
+2023-08-03 20:43:44,008.mtcars_server.INFO Recent regular market price for The Vita Coco Company.
+Updated once per minute for 15 minutes.
+Keeps the most recent 10 minutes of data.
+2023-08-03 20:43:44,016.mtcars_server.INFO Rendering STOCK table with 2 rows
+2023-08-03 20:43:44,021.mtcars_server.INFO Rendering STOCK chart with 2 points
+2023-08-03 20:43:48,387.mtcars_server.DEBUG filter message: Showing 28 of 32 records
+2023-08-03 20:43:48,401.mtcars_server.INFO Starting mtcars_output_widget1
+2023-08-03 20:43:48,481.mtcars_server.INFO Starting mtcars_plot1
+2023-08-03 20:43:49,767.mtcars_server.DEBUG filter message: Showing 32 of 32 records
+2023-08-03 20:43:49,796.mtcars_server.INFO Starting mtcars_output_widget1
+2023-08-03 20:43:49,880.mtcars_server.INFO Starting mtcars_plot1
+2023-08-03 20:44:17,372.mtcars_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module05\cintel-05-live-updates\data\mtcars_location.csv
+2023-08-03 20:44:17,384.mtcars_server.INFO READING df len 12
+2023-08-03 20:44:17,386.mtcars_server.INFO Rendering TEMP table with 3 rows
+2023-08-03 20:44:17,393.mtcars_server.INFO Rendering TEMP chart with 3 points
+2023-08-03 20:44:18,373.mtcars_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module05\cintel-05-live-updates\data\mtcars_stock.csv
+2023-08-03 20:44:18,380.mtcars_server.INFO READING df len 12
+2023-08-03 20:44:18,383.mtcars_server.INFO Rendering STOCK table with 3 rows
+2023-08-03 20:44:18,391.mtcars_server.INFO Rendering STOCK chart with 3 points
