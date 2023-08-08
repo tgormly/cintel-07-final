@@ -41,7 +41,7 @@ async def update_csv_files():
         await asyncio.sleep(60)  # wait for 60 seconds
 
 app_ui = ui.page_navbar(
-    shinyswatch.theme.morph(),
+    shinyswatch.theme.united(),
     ui.nav(
         "MT_Cars",
         ui.layout_sidebar(
@@ -50,13 +50,13 @@ app_ui = ui.page_navbar(
         ),
     ),
     ui.nav(ui.a("About", href="https://github.com/tgormly")),
-    ui.nav(ui.a("GitHub", href="https://github.com/tgormly/cintel-05-live-updates1")),
-    ui.nav(ui.a("App", href="https://tgormly.shinyapps.io/cintel-05-live-updates1/")),
+    ui.nav(ui.a("GitHub", href="https://github.com/tgormly/cintel-07-final")),
+    ui.nav(ui.a("App", href="https://tgormly.shinyapps.io/cintel-07-final/")),
     ui.nav(ui.a("Plotly Express", href="https://plotly.com/python/line-and-scatter/")),
     ui.nav(ui.a("WeatherAPI", href="https://openweathermap.org/api")),
     ui.nav(ui.a("OneCallAPI", href="https://openweathermap.org/api/one-call-3")),
     ui.nav(ui.a("File_Reader", href="https://shiny.rstudio.com/py/api/reactive.file_reader.html")),
-    title=ui.h1("Tim Gormly Dashboard"),
+    title=ui.h1("Tim Gormly Final Project"),
 )
 
 
