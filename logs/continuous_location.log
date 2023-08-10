@@ -1,25 +1,7 @@
-2023-08-07 21:38:37,529.continuous_location.INFO =============================================================
-2023-08-07 21:38:37,530.continuous_location.INFO Today is 2023-08-07 at 09:38 PM
-2023-08-07 21:38:37,531.continuous_location.INFO This file is running on: nt Windows 10
-2023-08-07 21:38:37,531.continuous_location.INFO The Python version is: 3.9.5
-2023-08-07 21:38:37,531.continuous_location.INFO The active environment path is:   C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\.venv
-2023-08-07 21:38:37,532.continuous_location.INFO The current working directory is: C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final
-2023-08-07 21:38:37,532.continuous_location.INFO =============================================================
-2023-08-07 21:38:54,558.continuous_location.INFO Calling update_csv_location
-2023-08-07 21:38:54,560.continuous_location.INFO update_interval: 60
-2023-08-07 21:38:54,561.continuous_location.INFO total_runtime: 900
-2023-08-07 21:38:54,562.continuous_location.INFO num_updates: 40
-2023-08-07 21:38:54,564.continuous_location.INFO Initialized csv file at C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\mtcars_location.csv
-2023-08-07 21:38:54,565.continuous_location.INFO Calling get_temperature_from_openweathermap for {lat}, {long}}
-2023-08-07 21:38:54,569.continuous_location.INFO Calling fetch_from_url for https://api.openweathermap.org/data/2.5/weather?lat=47.903237&lon=-91.867087&appid=185b1385e714e2b02648655525d5b499&units=imperial
-2023-08-07 21:38:54,826.continuous_location.INFO Data from openweathermap: <fetch.HttpResponse object at 0x0000024A0BD0B670>
-2023-08-07 21:38:54,826.continuous_location.INFO Calling get_temperature_from_openweathermap for {lat}, {long}}
-2023-08-07 21:38:54,828.continuous_location.INFO Calling fetch_from_url for https://api.openweathermap.org/data/2.5/weather?lat=36.5323&lon=-116.93&appid=185b1385e714e2b02648655525d5b499&units=imperial
-2023-08-07 21:38:55,004.continuous_location.INFO Data from openweathermap: <fetch.HttpResponse object at 0x0000024A0A6BADF0>
-2023-08-07 21:38:55,005.continuous_location.INFO Calling get_temperature_from_openweathermap for {lat}, {long}}
-2023-08-07 21:38:55,006.continuous_location.INFO Calling fetch_from_url for https://api.openweathermap.org/data/2.5/weather?lat=40.346102&lon=-94.872471&appid=185b1385e714e2b02648655525d5b499&units=imperial
-2023-08-07 21:38:55,190.continuous_location.INFO Data from openweathermap: <fetch.HttpResponse object at 0x0000024A0D9A78E0>
-2023-08-07 21:38:55,190.continuous_location.INFO Calling get_temperature_from_openweathermap for {lat}, {long}}
-2023-08-07 21:38:55,192.continuous_location.INFO Calling fetch_from_url for https://api.openweathermap.org/data/2.5/weather?lat=40.416775&lon=-3.70379&appid=185b1385e714e2b02648655525d5b499&units=imperial
-2023-08-07 21:38:55,391.continuous_location.INFO Data from openweathermap: <fetch.HttpResponse object at 0x0000024A101538B0>
-2023-08-07 21:38:55,402.continuous_location.INFO Saving temperatures to C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\mtcars_location.csv
+2023-08-09 20:17:51,751.continuous_location.INFO =============================================================
+2023-08-09 20:17:51,751.continuous_location.INFO Today is 2023-08-09 at 08:17 PM
+2023-08-09 20:17:51,751.continuous_location.INFO This file is running on: nt Windows 10
+2023-08-09 20:17:51,752.continuous_location.INFO The Python version is: 3.9.5
+2023-08-09 20:17:51,752.continuous_location.INFO The active environment path is:   C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\.venv
+2023-08-09 20:17:51,753.continuous_location.INFO The current working directory is: C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final
+2023-08-09 20:17:51,753.continuous_location.INFO =============================================================

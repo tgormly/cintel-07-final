@@ -18,10 +18,9 @@ import shinyswatch          # pip install shinyswatch
 
 # Finally, import what we need from other local code files.
 from continuous_location import update_csv_location
-from continuous_stock import update_csv_stock
-from mtcars_server import get_mtcars_server_functions
-from mtcars_ui_inputs import get_mtcars_inputs
-from mtcars_ui_outputs import get_mtcars_outputs
+from beachday_server import get_beachday_server_functions
+from beachday_ui_inputs import get_beachday_inputs
+from beachday_ui_outputs import get_beachday_outputs
 from util_logger import setup_logger
 
 # Set up a logger for this file (see the logs folder to help with debugging).
@@ -35,18 +34,17 @@ async def update_csv_files():
     while True:
         logger.info("Calling continuous updates ...")
         task1 = asyncio.create_task(update_csv_location())
-        task2 = asyncio.create_task(update_csv_stock())
         await asyncio.gather(task1)
-        await asyncio.gather(task2)
+        # await asyncio.gather(task2)
         await asyncio.sleep(60)  # wait for 60 seconds
 
 app_ui = ui.page_navbar(
-    shinyswatch.theme.united(),
+    shinyswatch.theme.paper(),
     ui.nav(
-        "MT_Cars",
+        "Beach Day",
         ui.layout_sidebar(
-            get_mtcars_inputs(),
-            get_mtcars_outputs(),
+            get_beachday_inputs(),
+            get_beachday_outputs(),
         ),
     ),
     ui.nav(ui.a("About", href="https://github.com/tgormly")),

@@ -40,7 +40,6 @@ from shiny import render, reactive
 from shinywidgets import render_widget
 
 # Local Imports
-from mtcars_get_basics import get_mtcars_df
 from util_logger import setup_logger
 
 # Set up a global logger for this file
@@ -51,97 +50,16 @@ csv_locations = Path(__file__).parent.joinpath("data").joinpath("mtcars_location
 csv_stocks = Path(__file__).parent.joinpath("data").joinpath("mtcars_stock.csv")
 
 
-def get_mtcars_server_functions(input, output, session):
+def get_beachday_server_functions(input, output, session):
     """Define functions to create UI outputs."""
 
     # First, declare shared reactive values (used between functions) up front
     # Initialize the values on startup
 
     reactive_location = reactive.Value("ELY MN")
-    reactive_stock = reactive.Value("Duolingo")
 
-    # Previously, we had a single reactive dataframe to hold filtered results
-    reactive_df = reactive.Value()
 
-    # We also provided shared variables to hold the original dataframe and its count
-    original_df = get_mtcars_df()
-    total_count = len(original_df)
-
-    # Then, define our server functions
-
-    @reactive.Effect
-    @reactive.event(input.MTCARS_MPG_RANGE)
-    def _():
-        """Update the filtered dataframe when the user changes the mpg range."""
-
-        # With Shiny, we call the copy() function to make a copy of the original dataframe
-        # This is to signal that a value has truly changed
-        df = original_df.copy()
-
-        input_range = input.MTCARS_MPG_RANGE()
-        input_min = input_range[0]
-        input_max = input_range[1]
-
-        """
-        Filter the dataframe to just those greater than or equal to the min
-        and less than or equal to the max
-        Note: The ampersand (&) is the Python operator for AND
-        The column name is in quotes and is "mpg".
-        You must be familiar with the dataset to know the column names.
-        """
-
-        filtered_df = df[(df["mpg"] >= input_min) & (df["mpg"] <= input_max)]
-
-        # Set the reactive values
-        # These are things that will change when the user changes the inputs
-        # We use them to drive the reactive outputs
-        # First, there's the filtered dataframe
-        reactive_df.set(filtered_df)
-
-    @output
-    @render.text
-    def mtcars_record_count_string():
-        filtered_df = reactive_df.get()
-        filtered_count = len(filtered_df)
-        message = f"Showing {filtered_count} of {total_count} records"
-        logger.debug(f"filter message: {message}")
-        return message
-
-    @output
-    @render.table
-    def mtcars_filtered_table():
-        filtered_df = reactive_df.get()
-        return filtered_df
-
-    @output
-    @render_widget
-    def mtcars_output_widget1():
-        logger.info(f"Starting mtcars_output_widget1")
-        df = reactive_df.get()
-        plotly_express_plot = px.scatter(df, x="mpg", y="hp", color="cyl", size="wt")
-        plotly_express_plot.update_layout(title="MT Cars with Plotly Express")
-        return plotly_express_plot
-
-    @output
-    @render.plot
-    def mtcars_plot1():
-        logger.info(f"Starting mtcars_plot1")
-        df = reactive_df.get()
-        matplotlib_fig, ax = plt.subplots()
-        plt.title("MT Cars with matplotlib")
-        ax.scatter(df["wt"], df["mpg"])
-        return matplotlib_fig
-
-    @output
-    @render.plot
-    def mtcars_plot2():
-        df = reactive_df.get()
-        plotnine_plot = (
-            ggplot(df, aes("wt", "mpg"))
-            + geom_point()
-            + ggtitle("MT Cars with plotnine")
-        )
-        return plotnine_plot
+    
 
     ###############################################################
     # CONTINUOUS LOCATION UPDATES (string, table, chart)

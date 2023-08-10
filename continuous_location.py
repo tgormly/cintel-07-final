@@ -1,35 +1,9 @@
 """
-Purpose: Illustrate addition of continuous information. 
-
-This is a simple example that uses a deque to store the last 15 minutes of
-temperature readings for three locations.
-
-The data is updated every minute.
-
-Continuous information might also come from a database, a data lake, a data warehouse, or a cloud service.
-
+Use Open Weather Map API to find and store the temperature for 10 popular beach destinations around the wrold
 ----------------------------
 Open API Weather Information
 -----------------------------
-
 Go to: https://openweathermap.org/
-
-And sign up for your own free account and API key. 
-
-The key should be kept secret - do not share it with others.
-Open Weather API allows 1000 free requests per day.
-That's about 125 per working hour, so comment it out when first testing. 
-
-After everything works, and you have your own API key, uncomment it and use the real information.
-
------------------------
-Keeping Secrets Secret
------------------------
-
-Keep secrets in a .env file - load it, read the values.
-Add the .env file to your .gitignore so you don't publish it to GitHub.
-We usually include a .env-example file to illustrate the format.
-
 """
 
 
@@ -65,15 +39,22 @@ def lookup_lat_long(location):
     """Return the latitude and longitude for the given location."""
     # Master dictionary of locations. Each key is a location, and each value is
     # a dictionary itself with a "latitude" and "longitude" key, and actual numeric value for each key as the value
-    locations_dictionary = {
-        "ELY MN": {"latitude": 47.903237, "longitude": -91.867087},
-        "Death Valley CA": {"latitude": 36.5323, "longitude": -116.93},
-        "Maryville MO": {"latitude": 40.346102, "longitude": -94.872471},
-        "Madrid, Spain": {"latitude": 40.416775, "longitude": -3.703790},
+    beach_dictionary = {
+    "Bondi Beach, Australia": {"latitude": -33.8917, "longitude": 151.2745},
+    "Copacabana Beach, Brazil": {"latitude": -22.9714, "longitude": -43.1828},
+    "Waikiki Beach, Hawaii, USA": {"latitude": 21.2765, "longitude": -157.8272},
+    "Malibu Beach, California, USA": {"latitude": 34.0259, "longitude": -118.7798},
+    "Bora Bora Beach, French Polynesia": {"latitude": -16.5004, "longitude": -151.7415},
+    "Anse Source d'Argent, Seychelles": {"latitude": -4.3608, "longitude": 55.8305},
+    "Railay Beach, Thailand": {"latitude": 8.0119, "longitude": 98.8365},
+    "Navagio Beach (Shipwreck Beach), Greece": {"latitude": 37.8515, "longitude": 20.6248},
+    "Whitehaven Beach, Australia": {"latitude": -20.2825, "longitude": 149.0393},
+    "Matira Beach, Bora Bora, French Polynesia": {"latitude": -16.5015, "longitude": -151.7414}
     }
+
     # this sets the location dictionary returned by the function, based on the location that was passed into this
     # function
-    answer_dict = locations_dictionary[location]
+    answer_dict = beach_dictionary[location]
     lat = answer_dict["latitude"] # assigns value of latitude key into lat variable
     long = answer_dict["longitude"] # assigns value of longitude key into long variable
     return lat, long
@@ -84,10 +65,10 @@ async def get_temperature_from_openweathermap(lat, long):
     api_key = get_API_key()
     open_weather_url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={long}&appid={api_key}&units=imperial"
     logger.info(f"Calling fetch_from_url for {open_weather_url}")
-    result = await fetch_from_url(open_weather_url, "json")
-    logger.info(f"Data from openweathermap: {result}")
-    temp_F = result.data["main"]["temp"]
-    # temp_F = randint(68, 77)
+    # result = await fetch_from_url(open_weather_url, "json")
+    # logger.info(f"Data from openweathermap: {result}")
+    # temp_F = result.data["main"]["temp"]
+    temp_F = randint(68, 77)
     return temp_F
 
 
@@ -99,11 +80,20 @@ def init_csv_file(file_path):
     df_empty.to_csv(file_path, index=False)
 
 
-async def update_csv_location():
+async def update_csv_beach():
     """Update the CSV file with the latest location information."""
     logger.info("Calling update_csv_location")
     try:
-        locations = ["ELY MN", "Death Valley CA", "Maryville MO", "Madrid, Spain"]
+        locations = [   "Bondi Beach, Australia",
+                        "Copacabana Beach, Brazil",
+                        "Waikiki Beach, Hawaii, USA",
+                        "Malibu Beach, California, USA",
+                        "Bora Bora Beach, French Polynesia",
+                        "Anse Source d'Argent, Seychelles",
+                        "Railay Beach, Thailand",
+                        "Navagio Beach (Shipwreck Beach), Greece",
+                        "Whitehaven Beach, Australia",
+                        "Matira Beach, Bora Bora, French Polynesia"]
         update_interval = 60  # Update every 1 minute (60 seconds)
         total_runtime = 15 * 60  # Total runtime maximum of 15 minutes
         num_updates = 10 * len(locations) # Keep the most recent 10 readings
