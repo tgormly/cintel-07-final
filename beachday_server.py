@@ -59,8 +59,6 @@ def get_beachday_server_functions(input, output, session):
     reactive_location = reactive.Value("ELY MN")
 
 
-    
-
     ###############################################################
     # CONTINUOUS LOCATION UPDATES (string, table, chart)
     ###############################################################
@@ -181,17 +179,9 @@ def get_beachday_server_functions(input, output, session):
     # Includes our 2 new selection strings and 2 new output widgets
 
     return [
-        mtcars_record_count_string,
-        mtcars_filtered_table,
-        mtcars_output_widget1,
-        mtcars_plot1,
-        mtcars_plot2,
         mtcars_location_string,
         mtcars_location_table,
         mtcars_location_chart,
-        mtcars_stock_string,
-        mtcars_stock_table,
-        mtcars_stock_chart
     ]
 
 
