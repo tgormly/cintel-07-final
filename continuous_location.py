@@ -64,7 +64,7 @@ async def get_temperature_from_openweathermap(lat, long):
     logger.info("Calling get_temperature_from_openweathermap for {lat}, {long}}")
     api_key = get_API_key()
     open_weather_url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={long}&appid={api_key}&units=imperial"
-    logger.info(f"Calling fetch_from_url for {open_weather_url}")
+    # logger.info(f"Calling fetch_from_url for {open_weather_url}")
     # result = await fetch_from_url(open_weather_url, "json")
     # logger.info(f"Data from openweathermap: {result}")
     # temp_F = result.data["main"]["temp"]

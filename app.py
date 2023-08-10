@@ -39,7 +39,7 @@ async def update_csv_files():
         await asyncio.sleep(60)  # wait for 60 seconds
 
 app_ui = ui.page_navbar(
-    shinyswatch.theme.paper(),
+    shinyswatch.theme.vapor(),
     ui.nav(
         "Beach Day",
         ui.layout_sidebar(

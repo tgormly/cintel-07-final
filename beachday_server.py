@@ -46,8 +46,7 @@ from util_logger import setup_logger
 logger, logname = setup_logger(__name__)
 
 # Declare our file path variables globally so they can be used in all the functions (like logger)
-csv_locations = Path(__file__).parent.joinpath("data").joinpath("mtcars_location.csv")
-csv_stocks = Path(__file__).parent.joinpath("data").joinpath("mtcars_stock.csv")
+csv_beaches = Path(__file__).parent.joinpath("data").joinpath("beaches.csv")
 
 
 def get_beachday_server_functions(input, output, session):
@@ -56,7 +55,7 @@ def get_beachday_server_functions(input, output, session):
     # First, declare shared reactive values (used between functions) up front
     # Initialize the values on startup
 
-    reactive_location = reactive.Value("ELY MN")
+    reactive_location = reactive.Value("Bondi Beach, Australia")
 
 
     ###############################################################
@@ -68,21 +67,19 @@ def get_beachday_server_functions(input, output, session):
     def _():
         """Set two reactive values (the location and temps df) when user changes location"""
         reactive_location.set(input.MTCARS_LOCATION_SELECT())
-        # init_mtcars_temps_csv()
-        df = get_mtcars_temp_df()
+        df = get_beaches_df()
         logger.info(f"init reactive_temp_df len: {len(df)}")
 
-    @reactive.file_reader(str(csv_locations))
-    def get_mtcars_temp_df():
-        """Return mtcars temperatures pandas Dataframe."""
-        logger.info(f"READING df from {csv_locations}")
-        df = pd.read_csv(csv_locations)
+    @reactive.file_reader(str(csv_beaches))
+    def get_beaches_df():
+        logger.info(f"READING df from {csv_beaches}")
+        df = pd.read_csv(csv_beaches)
         logger.info(f"READING df len {len(df)}")
         return df
 
     @output
     @render.text
-    def mtcars_location_string():
+    def beach_string():
         """Return a string based on selected location."""
         logger.info("mtcars_temperature_location_string starting")
         selected = reactive_location.get()
@@ -95,8 +92,8 @@ def get_beachday_server_functions(input, output, session):
 
     @output
     @render.table
-    def mtcars_location_table():
-        df = get_mtcars_temp_df()
+    def beach_table():
+        df = get_beaches_df()
         # Filter the data based on the selected location
         df_location = df[df["Location"] == reactive_location.get()]
         logger.info(f"Rendering TEMP table with {len(df_location)} rows")
@@ -104,8 +101,8 @@ def get_beachday_server_functions(input, output, session):
 
     @output
     @render_widget
-    def mtcars_location_chart():
-        df = get_mtcars_temp_df()
+    def beach_chart():
+        df = get_beaches_df()
         # Filter the data based on the selected location
         df_location = df[df["Location"] == reactive_location.get()]
         logger.info(f"Rendering TEMP chart with {len(df_location)} points")
@@ -115,73 +112,14 @@ def get_beachday_server_functions(input, output, session):
         plotly_express_plot.update_layout(title="Continuous Temperature (F)")
         return plotly_express_plot
 
-
-
-    ###############################################################
-    # CONTINUOUS STOCK UPDATES (string, table, chart)
-    ###############################################################
-
-    @reactive.Effect
-    @reactive.event(input.MTCARS_STOCK_SELECT)
-    def _():
-        """Set two reactive values (the company and stock df) when user changes companies"""
-        reactive_stock.set(input.MTCARS_STOCK_SELECT())
-        # init_mtcars_temps_csv()
-        df = get_mtcars_stock_df()
-        logger.info(f"init reactive_temp_df len: {len(df)}")
-
-    @reactive.file_reader(str(csv_stocks))
-    def get_mtcars_stock_df():
-        """Return mtcars temperatures pandas Dataframe."""
-        logger.info(f"READING df from {csv_stocks}")
-        df = pd.read_csv(csv_stocks)
-        logger.info(f"READING df len {len(df)}")
-        return df
-
-    @output
-    @render.text
-    def mtcars_stock_string():
-        """Return a string based on selected location."""
-        logger.info("mtcars_temperature_location_string starting")
-        selected = reactive_stock.get()
-        line1 = f"Recent regular market price for {selected}."
-        line2 = "Updated once per minute for 15 minutes."
-        line3 = "Keeps the most recent 10 minutes of data."
-        message = f"{line1}\n{line2}\n{line3}"
-        logger.info(f"{message}")
-        return message
-
-    @output
-    @render.table
-    def mtcars_stock_table():
-        df = get_mtcars_stock_df()
-        # Filter the data based on the selected company
-        df_stock = df[df["Company"] == reactive_stock.get()]
-        logger.info(f"Rendering STOCK table with {len(df_stock)} rows")
-        return df_stock
-
-    @output
-    @render_widget
-    def mtcars_stock_chart():
-        df = get_mtcars_stock_df()
-        # Filter the data based on the selected location
-        df_stock = df[df["Company"] == reactive_stock.get()]
-        logger.info(f"Rendering STOCK chart with {len(df_stock)} points")
-        plotly_express_plot = px.line(
-            df_stock, x="Time", y="RegularMarketPrice", color="Ticker", markers=True
-        )
-        plotly_express_plot.update_layout(title="Continuous Regular Market Stock Price")
-        return plotly_express_plot
-
     ###############################################################
 
     # return a list of function names for use in reactive outputs
-    # Includes our 2 new selection strings and 2 new output widgets
 
     return [
-        mtcars_location_string,
-        mtcars_location_table,
-        mtcars_location_chart,
+        beach_string,
+        beach_table,
+        beach_chart,
     ]
 
 
