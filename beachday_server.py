@@ -77,6 +77,14 @@ def get_beachday_server_functions(input, output, session):
         logger.info(f"READING df len {len(df)}")
         return df
 
+    @reactive.file_reader(str(csv_beaches))
+    def get_current_beaches_df():
+        "Return a filtered dataframe that contains only the most recent record for every location"
+        logger.info(f"READING df from {csv_beaches}")
+        df = pd.read_csv(csv_beaches)
+        current_df = df.loc[df.groupby('Location')['Time'].idxmax()]
+        return current_df
+
     @output
     @render.text
     def beach_string():
