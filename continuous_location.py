@@ -60,22 +60,41 @@ def lookup_lat_long(location):
     return lat, long
 
 
-async def get_temperature_from_openweathermap(lat, long):
-    logger.info("Calling get_temperature_from_openweathermap for {lat}, {long}}")
+async def get_data_from_openweathermap(lat, long):
+    # logger.info("Calling get_temperature_from_openweathermap for {lat}, {long}}")
     api_key = get_API_key()
     open_weather_url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={long}&appid={api_key}&units=imperial"
     # logger.info(f"Calling fetch_from_url for {open_weather_url}")
-    # result = await fetch_from_url(open_weather_url, "json")
+    result = await fetch_from_url(open_weather_url, "json")
     # logger.info(f"Data from openweathermap: {result}")
-    # temp_F = result.data["main"]["temp"]
-    temp_F = randint(68, 77)
-    return temp_F
+    weather_data = {
+            "temperature_f": result.data["main"]["temp"],
+            "feels_like_temp_f": result.data["main"]["feels_like"],
+            "humidity": result.data["main"]["humidity"],
+            "wind_speed": result.data["wind"]["speed"],
+            "clouds": result.data["clouds"]["all"],
+            "weather_description": result.data["weather"][0]["description"]
+        }
+
+    
+    # weather_data = randint(68, 77)
+    return weather_data
 
 
 # Function to create or overwrite the CSV file with column headings
 def init_csv_file(file_path):
     df_empty = pd.DataFrame(
-        columns=["Location", "Latitude", "Longitude", "Time", "Temp_F"]
+        columns=["Location"
+                 , "Latitude"
+                 , "Longitude"
+                 , "Time"
+                 , "Temp_F"
+                 , "Feels_Like_Temp_F"
+                 , "Humidity"
+                 , "Wind_Speed"
+                 , "Cloud_Cover"
+                 , "Weather_Description"
+                 ]
     )
     df_empty.to_csv(file_path, index=False)
 
@@ -115,14 +134,19 @@ async def update_csv_beach():
         for _ in range(num_updates):  # To get num_updates readings
             for location in locations:
                 lat, long = lookup_lat_long(location)
-                new_temp = await get_temperature_from_openweathermap(lat, long)
+                new_weather_data = await get_data_from_openweathermap(lat, long)
                 time_now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")  # Current time
                 new_record = {
-                    "Location": location,
-                    "Latitude": lat,
-                    "Longitude": long,
-                    "Time": time_now,
-                    "Temp_F": new_temp,
+                    "Location": location
+                    , "Latitude": lat
+                    , "Longitude": long
+                    , "Time": time_now
+                    , "Temp_F": new_weather_data["temperature_f"]
+                    , "Feels_Like_Temp_F": new_weather_data["feels_like_temp_f"]
+                    , "Humidity": new_weather_data["humidity"]
+                    , "Wind_Speed": new_weather_data["wind_speed"]
+                    , "Cloud Cover": new_weather_data["clouds"]
+                    , "Weather_Description": new_weather_data["weather_description"]
                 }
                 records_deque.append(new_record)
 
@@ -131,7 +155,7 @@ async def update_csv_beach():
 
             # Save the DataFrame to the CSV file, deleting its contents before writing
             df.to_csv(fp, index=False, mode="w")
-            logger.info(f"Saving temperatures to {fp}")
+            logger.info(f"Saving weather data to {fp}")
 
             # Wait for update_interval seconds before the next reading
             await asyncio.sleep(update_interval)
