@@ -63,10 +63,10 @@ def get_beachday_server_functions(input, output, session):
     ###############################################################
 
     @reactive.Effect
-    @reactive.event(input.MTCARS_LOCATION_SELECT)
+    @reactive.event(input.BEACH_LOCATION_SELECT)
     def _():
         """Set two reactive values (the location and temps df) when user changes location"""
-        reactive_location.set(input.MTCARS_LOCATION_SELECT())
+        reactive_location.set(input.BEACH_LOCATION_SELECT())
         df = get_beaches_df()
         logger.info(f"init reactive_temp_df len: {len(df)}")
 
