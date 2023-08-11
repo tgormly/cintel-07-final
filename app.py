@@ -70,7 +70,7 @@ def server(input, output, session):
     asyncio.create_task(update_csv_files())
     logger.info("Starting continuous updates ...")
 
-    get_mtcars_server_functions(input, output, session)
+    get_beachday_server_functions(input, output, session)
 
 
 app = App(app_ui, server, debug=True)
