@@ -13,7 +13,7 @@ from random import randint
 
 def get_beachday_inputs():
     return ui.panel_sidebar(
-        ui.h2("Beach Day Inputs"),
+        ui.h2("Inputs"),
         ui.tags.hr(),
         
         ui.input_select(
