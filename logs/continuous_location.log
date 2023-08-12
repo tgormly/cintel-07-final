@@ -1,16 +1,18 @@
-2023-08-11 17:38:41,482.continuous_location.INFO =============================================================
-2023-08-11 17:38:41,483.continuous_location.INFO Today is 2023-08-11 at 05:38 PM
-2023-08-11 17:38:41,484.continuous_location.INFO This file is running on: nt Windows 10
-2023-08-11 17:38:41,484.continuous_location.INFO The Python version is: 3.9.5
-2023-08-11 17:38:41,485.continuous_location.INFO The active environment path is:   C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\.venv
-2023-08-11 17:38:41,485.continuous_location.INFO The current working directory is: C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final
-2023-08-11 17:38:41,485.continuous_location.INFO =============================================================
-2023-08-11 17:38:47,500.continuous_location.INFO Calling update_csv_location
-2023-08-11 17:38:47,501.continuous_location.INFO update_interval: 60
-2023-08-11 17:38:47,504.continuous_location.INFO total_runtime: 900
-2023-08-11 17:38:47,506.continuous_location.INFO num_updates: 100
-2023-08-11 17:38:47,508.continuous_location.INFO Initialized csv file at C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
-2023-08-11 17:38:49,302.continuous_location.INFO Saving weather data to C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
-2023-08-11 17:39:51,065.continuous_location.INFO Saving weather data to C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
-2023-08-11 17:40:52,806.continuous_location.INFO Saving weather data to C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
-2023-08-11 17:41:55,735.continuous_location.INFO Saving weather data to C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
+2023-08-11 19:21:47,970.continuous_location.INFO =============================================================
+2023-08-11 19:21:47,974.continuous_location.INFO Today is 2023-08-11 at 07:21 PM
+2023-08-11 19:21:47,974.continuous_location.INFO This file is running on: nt Windows 10
+2023-08-11 19:21:47,975.continuous_location.INFO The Python version is: 3.9.5
+2023-08-11 19:21:47,976.continuous_location.INFO The active environment path is:   C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\.venv
+2023-08-11 19:21:47,977.continuous_location.INFO The current working directory is: C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final
+2023-08-11 19:21:47,978.continuous_location.INFO =============================================================
+2023-08-11 19:21:53,628.continuous_location.INFO Calling update_csv_location
+2023-08-11 19:21:53,628.continuous_location.INFO update_interval: 60
+2023-08-11 19:21:53,629.continuous_location.INFO total_runtime: 900
+2023-08-11 19:21:53,630.continuous_location.INFO num_updates: 100
+2023-08-11 19:21:53,631.continuous_location.INFO Initialized csv file at C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
+2023-08-11 19:21:55,533.continuous_location.INFO Saving weather data to C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
+2023-08-11 19:22:58,259.continuous_location.INFO Saving weather data to C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
+2023-08-11 19:23:59,912.continuous_location.INFO Saving weather data to C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
+2023-08-11 19:25:01,655.continuous_location.INFO Saving weather data to C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
+2023-08-11 19:26:03,733.continuous_location.INFO Saving weather data to C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
+2023-08-11 19:27:05,747.continuous_location.INFO Saving weather data to C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
