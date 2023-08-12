@@ -82,21 +82,52 @@ def get_beachday_server_functions(input, output, session):
         "Return a filtered dataframe that contains only the most recent record for every location"
         logger.info(f"READING df from {csv_beaches}")
         df = pd.read_csv(csv_beaches)
-        current_df = df.loc[df.groupby('Location')['Time'].idxmax()]
+        
+        # Convert 'Time' column to datetime
+        df['Time'] = pd.to_datetime(df['Time'])
+        
+        # Sort DataFrame by 'Time'
+        df.sort_values(by='Time', ascending=False, inplace=True)
+        
+        # Drop duplicates based on 'Location', keeping the first occurrence
+        current_df = df.drop_duplicates(subset='Location', keep='first')
+        
         return current_df
+
+    ############ SUMMARY OF CURRENT WEATHER ###################################################
 
     @output
     @render.text
-    def beach_string():
-        """Return a string based on selected location."""
-        logger.info("mtcars_temperature_location_string starting")
+    def beach_weather_summary():
+        "Return a string that contains a summary of current weather data for selected location"
+        logger.info("beach_weather_summary starting")
         selected = reactive_location.get()
-        line1 = f"Recent Temperature in F for {selected}."
-        line2 = "Updated once per minute for 15 minutes."
-        line3 = "Keeps the most recent 10 minutes of data."
-        message = f"{line1}\n{line2}\n{line3}"
-        logger.info(f"{message}")
-        return message
+        df = get_current_beaches_df()
+
+        selected_row = df[df['Location'] == selected]
+        temperature = selected_row['Temp_F'].iloc[0]
+        feels_like = selected_row['Feels_Like_Temp_F'].iloc[0]
+        humidity = selected_row['Humidity'].iloc[0]
+        wind_speed = selected_row['Wind_Speed'].iloc[0]
+        cloud_cover = selected_row['Cloud Cover'].iloc[0]
+
+        description = selected_row['Weather_Description'].iloc[0]
+        description = description[0].upper() + description[1:]
+
+        summary = f"""{selected}
+
+{description}
+
+• Current Temperature:  {temperature}°F
+• Feels Like:           {feels_like}°F
+• Humidity:             {humidity}%
+• Wind Speed:           {wind_speed} mph
+• Cloud Cover:          {cloud_cover}%
+"""
+        return summary
+
+
+    ################## RECENT DATA FOR SELECTED BEACH #####
 
     @output
     @render.table
@@ -107,9 +138,26 @@ def get_beachday_server_functions(input, output, session):
         logger.info(f"Rendering TEMP table with {len(df_location)} rows")
         return df_location
 
+
+
+    ################# TEMP CHART ##########################
+
+    @output
+    @render.text
+    def beach_temp_chart_string():
+        """Return a string based on selected location."""
+        logger.info("beach_string starting")
+        selected = reactive_location.get()
+        line1 = f"Recent Temperature in F for {selected}."
+        line2 = "Updated once per minute for 15 minutes."
+        line3 = "Keeps the most recent 10 minutes of data."
+        message = f"{line1}\n{line2}\n{line3}"
+        logger.info(f"{message}")
+        return message
+
     @output
     @render_widget
-    def beach_chart():
+    def beach_temp_chart():
         df = get_beaches_df()
         # Filter the data based on the selected location
         df_location = df[df["Location"] == reactive_location.get()]
@@ -120,14 +168,135 @@ def get_beachday_server_functions(input, output, session):
         plotly_express_plot.update_layout(title="Continuous Temperature (F)")
         return plotly_express_plot
 
+    ################# FEELS LIKE CHART ##########################
+
+    @output
+    @render.text
+    def beach_feels_like_chart_string():
+        """Return a string based on selected location."""
+        logger.info("beach_string starting")
+        selected = reactive_location.get()
+        line1 = f'Recent "Feels Like" Temperature in F for {selected}.'
+        line2 = "Updated once per minute for 15 minutes."
+        line3 = "Keeps the most recent 10 minutes of data."
+        message = f"{line1}\n{line2}\n{line3}"
+        logger.info(f"{message}")
+        return message
+
+    @output
+    @render_widget
+    def beach_feels_like_chart():
+        df = get_beaches_df()
+        # Filter the data based on the selected location
+        df_location = df[df["Location"] == reactive_location.get()]
+        logger.info(f"Rendering Feels Like chart with {len(df_location)} points")
+        plotly_express_plot = px.line(
+            df_location, x="Time", y="Feels_Like_Temp_F", color="Location", markers=True
+        )
+        plotly_express_plot.update_layout(title="Continuous 'Feels Like' Temperature (F)")
+        return plotly_express_plot
+    
+    ################# HUMIDITY CHART ##########################
+
+    @output
+    @render.text
+    def beach_humidity_chart_string():
+        """Return a string based on selected location."""
+        logger.info("beach_string starting")
+        selected = reactive_location.get()
+        line1 = f'Recent Humidity % for {selected}.'
+        line2 = "Updated once per minute for 15 minutes."
+        line3 = "Keeps the most recent 10 minutes of data."
+        message = f"{line1}\n{line2}\n{line3}"
+        logger.info(f"{message}")
+        return message
+
+    @output
+    @render_widget
+    def beach_humidity_chart():
+        df = get_beaches_df()
+        # Filter the data based on the selected location
+        df_location = df[df["Location"] == reactive_location.get()]
+        logger.info(f"Rendering humidity chart with {len(df_location)} points")
+        plotly_express_plot = px.line(
+            df_location, x="Time", y="Humidity", color="Location", markers=True
+        )
+        plotly_express_plot.update_layout(title="Continuous Humidity %")
+        return plotly_express_plot
+
+    ################# WIND SPEED CHART ##########################
+
+    @output
+    @render.text
+    def beach_wind_speed_chart_string():
+        """Return a string based on selected location."""
+        logger.info("beach_string starting")
+        selected = reactive_location.get()
+        line1 = f'Recent wind speed (mph) for {selected}.'
+        line2 = "Updated once per minute for 15 minutes."
+        line3 = "Keeps the most recent 10 minutes of data."
+        message = f"{line1}\n{line2}\n{line3}"
+        logger.info(f"{message}")
+        return message
+
+    @output
+    @render_widget
+    def beach_wind_speed_chart():
+        df = get_beaches_df()
+        # Filter the data based on the selected location
+        df_location = df[df["Location"] == reactive_location.get()]
+        logger.info(f"Rendering wind speed chart with {len(df_location)} points")
+        plotly_express_plot = px.line(
+            df_location, x="Time", y="Wind_Speed", color="Location", markers=True
+        )
+        plotly_express_plot.update_layout(title="Continuous Wind Speed (mph)")
+        return plotly_express_plot
+    
+    ################# CLOUD COVER CHART ##########################
+
+    @output
+    @render.text
+    def beach_cloud_cover_chart_string():
+        """Return a string based on selected location."""
+        logger.info("beach_string starting")
+        selected = reactive_location.get()
+        line1 = f'Recent cloud cover % for {selected}.'
+        line2 = "Updated once per minute for 15 minutes."
+        line3 = "Keeps the most recent 10 minutes of data."
+        message = f"{line1}\n{line2}\n{line3}"
+        logger.info(f"{message}")
+        return message
+
+    @output
+    @render_widget
+    def beach_cloud_cover_chart():
+        df = get_beaches_df()
+        # Filter the data based on the selected location
+        df_location = df[df["Location"] == reactive_location.get()]
+        logger.info(f"Rendering cloud cover % chart with {len(df_location)} points")
+        plotly_express_plot = px.line(
+            df_location, x="Time", y="Cloud Cover", color="Location", markers=True
+        )
+        plotly_express_plot.update_layout(title="Continuous Cloud Cover %")
+        return plotly_express_plot
+    
     ###############################################################
 
     # return a list of function names for use in reactive outputs
 
     return [
-        beach_string,
+        beach_weather_summary,
+        beach_temp_chart_string,
         beach_table,
-        beach_chart,
+        beach_temp_chart,
+        beach_feels_like_chart_string,
+        beach_feels_like_chart,
+        beach_humidity_chart_string,
+        beach_humidity_chart,
+        beach_wind_speed_chart_string,
+        beach_wind_speed_chart,
+        beach_cloud_cover_chart_string,
+        beach_cloud_cover_chart
     ]
 
 
