@@ -60,7 +60,7 @@ def get_beachday_inputs():
             value=True
         ),                        
 
-        ui.tags.p("(Unfortunately, I was unable to actually get this to toggle the charts in my outputs on and off before the deadline"),
+        ui.tags.p("(Unfortunately, I was unable to actually get this to toggle the charts in my outputs on and off before the deadline)"),
 
         ui.hr(),
         ui.p("🕒 Please be patient. Outputs may take a few seconds to load."),
