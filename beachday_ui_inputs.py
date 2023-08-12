@@ -13,12 +13,11 @@ from random import randint
 
 def get_beachday_inputs():
     return ui.panel_sidebar(
-        ui.h2("Inputs"),
-        ui.tags.hr(),
-        
+        ui.h3("Select a beach from the dropdown below:"),
+        ui.tags.br(),
         ui.input_select(
             id="BEACH_LOCATION_SELECT",
-            label="Choose a beach",
+            label='',
             choices=[
                     "Bondi Beach, Australia",
                     "Copacabana Beach, Brazil",
@@ -34,6 +33,36 @@ def get_beachday_inputs():
             selected = "Bondi Beach, Australia",
         ),
         ui.tags.hr(),
+        ui.h3("What data would you like to see?"),
+        ui.input_switch(
+            id="TEMP_SWITCH",
+            label="Temperature",
+            value=True
+        ),
+        ui.input_switch(
+            id="FEELS_LIKE_SWITCH",
+            label="Feels Like Temperature",
+            value=True
+        ),
+        ui.input_switch(
+            id="HUMIDITY_SWITCH",
+            label="Humidity",
+            value=True
+        ),
+        ui.input_switch(
+            id="WIND_SPEED_SWITCH",
+            label="Wind Speed",
+            value=True
+        ),
+        ui.input_switch(
+            id="CLOUD_COVER_SWITCH",
+            label="Cloud Cover",
+            value=True
+        ),                        
+
+        ui.tags.p("(Unfortunately, I was unable to actually get this to toggle the charts in my outputs on and off before the deadline"),
+
+        ui.hr(),
         ui.p("🕒 Please be patient. Outputs may take a few seconds to load."),
         ui.tags.hr(),
     )
