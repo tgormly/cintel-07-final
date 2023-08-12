@@ -1,0 +1,61 @@
+Location,Latitude,Longitude,Time,Temp_F,Feels_Like_Temp_F,Humidity,Wind_Speed,Cloud Cover,Weather_Description
+"Bondi Beach, Australia",-33.8917,151.2745,2023-08-11 19:21:53,60.3,58.6,55,6.91,0,clear sky
+"Copacabana Beach, Brazil",-22.9714,-43.1828,2023-08-11 19:21:54,76.59,77.14,68,11.5,0,clear sky
+"Waikiki Beach, Hawaii, USA",21.2765,-157.8272,2023-08-11 19:21:54,86.29,88.92,52,17.27,20,few clouds
+"Malibu Beach, California, USA",34.0259,-118.7798,2023-08-11 19:21:54,77.9,78.96,76,3.0,34,scattered clouds
+"Bora Bora Beach, French Polynesia",-16.5004,-151.7415,2023-08-11 19:21:54,72.45,72.63,69,17.18,67,broken clouds
+"Anse Source d'Argent, Seychelles",-4.3608,55.8305,2023-08-11 19:21:54,78.75,78.75,88,16.89,47,scattered clouds
+"Railay Beach, Thailand",8.0119,98.8365,2023-08-11 19:21:55,75.34,77.27,100,2.3,40,scattered clouds
+"Navagio Beach (Shipwreck Beach), Greece",37.8515,20.6248,2023-08-11 19:21:55,72.27,72.48,70,3.47,0,clear sky
+"Whitehaven Beach, Australia",-20.2825,149.0393,2023-08-11 19:21:55,67.82,67.73,73,12.66,0,clear sky
+"Matira Beach, Bora Bora, French Polynesia",-16.5015,-151.7414,2023-08-11 19:21:55,72.45,72.63,69,17.18,67,broken clouds
+"Bondi Beach, Australia",-33.8917,151.2745,2023-08-11 19:22:55,60.3,58.6,55,6.91,0,clear sky
+"Copacabana Beach, Brazil",-22.9714,-43.1828,2023-08-11 19:22:55,76.59,77.14,68,11.5,0,clear sky
+"Waikiki Beach, Hawaii, USA",21.2765,-157.8272,2023-08-11 19:22:56,86.29,88.92,52,17.27,20,few clouds
+"Malibu Beach, California, USA",34.0259,-118.7798,2023-08-11 19:22:56,77.9,78.96,76,3.0,34,scattered clouds
+"Bora Bora Beach, French Polynesia",-16.5004,-151.7415,2023-08-11 19:22:56,72.45,72.63,69,17.18,67,broken clouds
+"Anse Source d'Argent, Seychelles",-4.3608,55.8305,2023-08-11 19:22:57,78.75,78.75,88,16.89,47,scattered clouds
+"Railay Beach, Thailand",8.0119,98.8365,2023-08-11 19:22:57,75.34,77.27,100,2.3,40,scattered clouds
+"Navagio Beach (Shipwreck Beach), Greece",37.8515,20.6248,2023-08-11 19:22:57,72.27,72.48,70,3.47,0,clear sky
+"Whitehaven Beach, Australia",-20.2825,149.0393,2023-08-11 19:22:58,67.82,67.73,73,12.66,0,clear sky
+"Matira Beach, Bora Bora, French Polynesia",-16.5015,-151.7414,2023-08-11 19:22:58,72.45,72.63,69,17.18,67,broken clouds
+"Bondi Beach, Australia",-33.8917,151.2745,2023-08-11 19:23:58,60.3,58.6,55,6.91,0,clear sky
+"Copacabana Beach, Brazil",-22.9714,-43.1828,2023-08-11 19:23:58,76.59,77.14,68,11.5,0,clear sky
+"Waikiki Beach, Hawaii, USA",21.2765,-157.8272,2023-08-11 19:23:58,86.29,88.92,52,17.27,20,few clouds
+"Malibu Beach, California, USA",34.0259,-118.7798,2023-08-11 19:23:58,77.9,78.96,76,3.0,34,scattered clouds
+"Bora Bora Beach, French Polynesia",-16.5004,-151.7415,2023-08-11 19:23:59,72.45,72.63,69,17.18,67,broken clouds
+"Anse Source d'Argent, Seychelles",-4.3608,55.8305,2023-08-11 19:23:59,78.75,78.75,88,16.89,47,scattered clouds
+"Railay Beach, Thailand",8.0119,98.8365,2023-08-11 19:23:59,75.34,77.27,100,2.3,40,scattered clouds
+"Navagio Beach (Shipwreck Beach), Greece",37.8515,20.6248,2023-08-11 19:23:59,72.27,72.48,70,3.47,0,clear sky
+"Whitehaven Beach, Australia",-20.2825,149.0393,2023-08-11 19:23:59,67.82,67.73,73,12.66,0,clear sky
+"Matira Beach, Bora Bora, French Polynesia",-16.5015,-151.7414,2023-08-11 19:23:59,72.45,72.63,69,17.18,67,broken clouds
+"Bondi Beach, Australia",-33.8917,151.2745,2023-08-11 19:25:00,60.3,58.6,55,6.91,0,clear sky
+"Copacabana Beach, Brazil",-22.9714,-43.1828,2023-08-11 19:25:00,76.59,77.14,68,11.5,0,clear sky
+"Waikiki Beach, Hawaii, USA",21.2765,-157.8272,2023-08-11 19:25:00,86.29,88.92,52,17.27,20,few clouds
+"Malibu Beach, California, USA",34.0259,-118.7798,2023-08-11 19:25:00,77.9,78.96,76,3.0,34,scattered clouds
+"Bora Bora Beach, French Polynesia",-16.5004,-151.7415,2023-08-11 19:25:00,72.45,72.63,69,17.18,67,broken clouds
+"Anse Source d'Argent, Seychelles",-4.3608,55.8305,2023-08-11 19:25:00,78.75,78.75,88,16.89,47,scattered clouds
+"Railay Beach, Thailand",8.0119,98.8365,2023-08-11 19:25:01,75.34,77.27,100,2.3,40,scattered clouds
+"Navagio Beach (Shipwreck Beach), Greece",37.8515,20.6248,2023-08-11 19:25:01,72.27,72.48,70,3.47,0,clear sky
+"Whitehaven Beach, Australia",-20.2825,149.0393,2023-08-11 19:25:01,67.82,67.73,73,12.66,0,clear sky
+"Matira Beach, Bora Bora, French Polynesia",-16.5015,-151.7414,2023-08-11 19:25:01,72.45,72.63,69,17.18,67,broken clouds
+"Bondi Beach, Australia",-33.8917,151.2745,2023-08-11 19:26:01,60.3,58.6,55,6.91,0,clear sky
+"Copacabana Beach, Brazil",-22.9714,-43.1828,2023-08-11 19:26:02,76.59,77.14,68,11.5,0,clear sky
+"Waikiki Beach, Hawaii, USA",21.2765,-157.8272,2023-08-11 19:26:02,86.29,88.92,52,17.27,20,few clouds
+"Malibu Beach, California, USA",34.0259,-118.7798,2023-08-11 19:26:02,77.9,78.96,76,3.0,34,scattered clouds
+"Bora Bora Beach, French Polynesia",-16.5004,-151.7415,2023-08-11 19:26:02,72.45,72.63,69,17.18,67,broken clouds
+"Anse Source d'Argent, Seychelles",-4.3608,55.8305,2023-08-11 19:26:02,78.75,78.75,88,16.89,47,scattered clouds
+"Railay Beach, Thailand",8.0119,98.8365,2023-08-11 19:26:03,75.34,77.27,100,2.3,40,scattered clouds
+"Navagio Beach (Shipwreck Beach), Greece",37.8515,20.6248,2023-08-11 19:26:03,72.27,72.48,70,3.47,0,clear sky
+"Whitehaven Beach, Australia",-20.2825,149.0393,2023-08-11 19:26:03,67.82,67.73,73,12.66,0,clear sky
+"Matira Beach, Bora Bora, French Polynesia",-16.5015,-151.7414,2023-08-11 19:26:03,72.45,72.63,69,17.18,67,broken clouds
+"Bondi Beach, Australia",-33.8917,151.2745,2023-08-11 19:27:03,60.3,58.6,55,6.91,0,clear sky
+"Copacabana Beach, Brazil",-22.9714,-43.1828,2023-08-11 19:27:04,76.59,77.14,68,11.5,0,clear sky
+"Waikiki Beach, Hawaii, USA",21.2765,-157.8272,2023-08-11 19:27:04,86.29,88.92,52,17.27,20,few clouds
+"Malibu Beach, California, USA",34.0259,-118.7798,2023-08-11 19:27:04,77.9,78.96,76,3.0,34,scattered clouds
+"Bora Bora Beach, French Polynesia",-16.5004,-151.7415,2023-08-11 19:27:04,72.45,72.63,69,17.18,67,broken clouds
+"Anse Source d'Argent, Seychelles",-4.3608,55.8305,2023-08-11 19:27:04,78.75,78.75,88,16.89,47,scattered clouds
+"Railay Beach, Thailand",8.0119,98.8365,2023-08-11 19:27:05,75.34,77.27,100,2.3,40,scattered clouds
+"Navagio Beach (Shipwreck Beach), Greece",37.8515,20.6248,2023-08-11 19:27:05,72.27,72.48,70,3.47,0,clear sky
+"Whitehaven Beach, Australia",-20.2825,149.0393,2023-08-11 19:27:05,67.82,67.73,73,12.66,0,clear sky
+"Matira Beach, Bora Bora, French Polynesia",-16.5015,-151.7414,2023-08-11 19:27:05,72.45,72.63,69,17.18,67,broken clouds

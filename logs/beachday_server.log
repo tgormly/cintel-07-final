@@ -1,0 +1,98 @@
+2023-08-11 19:21:50,246.beachday_server.INFO =============================================================
+2023-08-11 19:21:50,248.beachday_server.INFO Today is 2023-08-11 at 07:21 PM
+2023-08-11 19:21:50,248.beachday_server.INFO This file is running on: nt Windows 10
+2023-08-11 19:21:50,249.beachday_server.INFO The Python version is: 3.9.5
+2023-08-11 19:21:50,249.beachday_server.INFO The active environment path is:   C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\.venv
+2023-08-11 19:21:50,250.beachday_server.INFO The current working directory is: C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final
+2023-08-11 19:21:50,250.beachday_server.INFO =============================================================
+2023-08-11 19:21:52,215.beachday_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
+2023-08-11 19:21:52,222.beachday_server.INFO READING df len 10
+2023-08-11 19:21:52,223.beachday_server.INFO init reactive_temp_df len: 10
+2023-08-11 19:21:52,224.beachday_server.INFO beach_weather_summary starting
+2023-08-11 19:21:52,225.beachday_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
+2023-08-11 19:21:52,238.beachday_server.INFO Rendering TEMP table with 1 rows
+2023-08-11 19:21:52,344.beachday_server.INFO beach_string starting
+2023-08-11 19:21:52,345.beachday_server.INFO Recent Temperature in F for Bondi Beach, Australia.
+Updated once per minute for 15 minutes.
+Keeps the most recent 10 minutes of data.
+2023-08-11 19:21:52,349.beachday_server.INFO Rendering TEMP chart with 1 points
+2023-08-11 19:21:53,236.beachday_server.INFO beach_string starting
+2023-08-11 19:21:53,236.beachday_server.INFO Recent "Feels Like" Temperature in F for Bondi Beach, Australia.
+Updated once per minute for 15 minutes.
+Keeps the most recent 10 minutes of data.
+2023-08-11 19:21:53,240.beachday_server.INFO Rendering Feels Like chart with 1 points
+2023-08-11 19:21:53,314.beachday_server.INFO beach_string starting
+2023-08-11 19:21:53,315.beachday_server.INFO Recent Humidity % for Bondi Beach, Australia.
+Updated once per minute for 15 minutes.
+Keeps the most recent 10 minutes of data.
+2023-08-11 19:21:53,319.beachday_server.INFO Rendering humidity chart with 1 points
+2023-08-11 19:21:53,389.beachday_server.INFO beach_string starting
+2023-08-11 19:21:53,389.beachday_server.INFO Recent wind speed (mph) for Bondi Beach, Australia.
+Updated once per minute for 15 minutes.
+Keeps the most recent 10 minutes of data.
+2023-08-11 19:21:53,392.beachday_server.INFO Rendering wind speed chart with 1 points
+2023-08-11 19:21:53,460.beachday_server.INFO beach_string starting
+2023-08-11 19:21:53,460.beachday_server.INFO Recent cloud cover % for Bondi Beach, Australia.
+Updated once per minute for 15 minutes.
+Keeps the most recent 10 minutes of data.
+2023-08-11 19:21:53,464.beachday_server.INFO Rendering cloud cover % chart with 1 points
+2023-08-11 19:21:55,548.beachday_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
+2023-08-11 19:21:55,564.beachday_server.INFO READING df len 10
+2023-08-11 19:21:55,566.beachday_server.INFO Rendering TEMP table with 1 rows
+2023-08-11 19:21:55,577.beachday_server.INFO Rendering TEMP chart with 1 points
+2023-08-11 19:21:55,715.beachday_server.INFO Rendering Feels Like chart with 1 points
+2023-08-11 19:21:55,785.beachday_server.INFO Rendering humidity chart with 1 points
+2023-08-11 19:21:55,851.beachday_server.INFO Rendering wind speed chart with 1 points
+2023-08-11 19:21:55,919.beachday_server.INFO Rendering cloud cover % chart with 1 points
+2023-08-11 19:21:56,082.beachday_server.INFO beach_weather_summary starting
+2023-08-11 19:21:56,083.beachday_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
+2023-08-11 19:22:58,267.beachday_server.INFO beach_weather_summary starting
+2023-08-11 19:22:58,269.beachday_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
+2023-08-11 19:22:58,330.beachday_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
+2023-08-11 19:22:58,333.beachday_server.INFO READING df len 20
+2023-08-11 19:22:58,336.beachday_server.INFO Rendering TEMP table with 2 rows
+2023-08-11 19:22:58,343.beachday_server.INFO Rendering TEMP chart with 2 points
+2023-08-11 19:22:58,424.beachday_server.INFO Rendering Feels Like chart with 2 points
+2023-08-11 19:22:58,490.beachday_server.INFO Rendering humidity chart with 2 points
+2023-08-11 19:22:58,565.beachday_server.INFO Rendering wind speed chart with 2 points
+2023-08-11 19:22:58,633.beachday_server.INFO Rendering cloud cover % chart with 2 points
+2023-08-11 19:23:59,917.beachday_server.INFO beach_weather_summary starting
+2023-08-11 19:23:59,918.beachday_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
+2023-08-11 19:23:59,946.beachday_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
+2023-08-11 19:23:59,949.beachday_server.INFO READING df len 30
+2023-08-11 19:23:59,952.beachday_server.INFO Rendering TEMP table with 3 rows
+2023-08-11 19:23:59,960.beachday_server.INFO Rendering TEMP chart with 3 points
+2023-08-11 19:24:00,038.beachday_server.INFO Rendering Feels Like chart with 3 points
+2023-08-11 19:24:00,111.beachday_server.INFO Rendering humidity chart with 3 points
+2023-08-11 19:24:00,199.beachday_server.INFO Rendering wind speed chart with 3 points
+2023-08-11 19:24:00,266.beachday_server.INFO Rendering cloud cover % chart with 3 points
+2023-08-11 19:25:01,659.beachday_server.INFO beach_weather_summary starting
+2023-08-11 19:25:01,660.beachday_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
+2023-08-11 19:25:01,686.beachday_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
+2023-08-11 19:25:01,690.beachday_server.INFO READING df len 40
+2023-08-11 19:25:01,691.beachday_server.INFO Rendering TEMP table with 4 rows
+2023-08-11 19:25:01,697.beachday_server.INFO Rendering TEMP chart with 4 points
+2023-08-11 19:25:01,771.beachday_server.INFO Rendering Feels Like chart with 4 points
+2023-08-11 19:25:01,847.beachday_server.INFO Rendering humidity chart with 4 points
+2023-08-11 19:25:01,916.beachday_server.INFO Rendering wind speed chart with 4 points
+2023-08-11 19:25:01,986.beachday_server.INFO Rendering cloud cover % chart with 4 points
+2023-08-11 19:26:03,739.beachday_server.INFO beach_weather_summary starting
+2023-08-11 19:26:03,740.beachday_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
+2023-08-11 19:26:03,768.beachday_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
+2023-08-11 19:26:03,773.beachday_server.INFO READING df len 50
+2023-08-11 19:26:03,775.beachday_server.INFO Rendering TEMP table with 5 rows
+2023-08-11 19:26:03,783.beachday_server.INFO Rendering TEMP chart with 5 points
+2023-08-11 19:26:03,935.beachday_server.INFO Rendering Feels Like chart with 5 points
+2023-08-11 19:26:04,008.beachday_server.INFO Rendering humidity chart with 5 points
+2023-08-11 19:26:04,083.beachday_server.INFO Rendering wind speed chart with 5 points
+2023-08-11 19:26:04,227.beachday_server.INFO Rendering cloud cover % chart with 5 points
+2023-08-11 19:27:05,758.beachday_server.INFO beach_weather_summary starting
+2023-08-11 19:27:05,760.beachday_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
+2023-08-11 19:27:05,825.beachday_server.INFO READING df from C:\Users\timgo\OneDrive\Desktop\School\Summer2023\Continuous Intelligence\Module07\cintel-07-final\data\beaches.csv
+2023-08-11 19:27:05,830.beachday_server.INFO READING df len 60
+2023-08-11 19:27:05,832.beachday_server.INFO Rendering TEMP table with 6 rows
+2023-08-11 19:27:05,853.beachday_server.INFO Rendering TEMP chart with 6 points
+2023-08-11 19:27:05,973.beachday_server.INFO Rendering Feels Like chart with 6 points
+2023-08-11 19:27:06,064.beachday_server.INFO Rendering humidity chart with 6 points
+2023-08-11 19:27:06,136.beachday_server.INFO Rendering wind speed chart with 6 points
+2023-08-11 19:27:06,209.beachday_server.INFO Rendering cloud cover % chart with 6 points
